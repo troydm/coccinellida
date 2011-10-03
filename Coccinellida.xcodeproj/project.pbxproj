@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		2D166D98143A3E4500A8E792 /* coccinellida.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2D166D97143A3E4500A8E792 /* coccinellida.icns */; };
+		2D1D51DF106D439600A7BCB1 /* taskicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D51DE106D439600A7BCB1 /* taskicon.png */; };
+		2D1D51E3106D459D00A7BCB1 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D51E2106D459D00A7BCB1 /* AppController.m */; };
+		2D56011E14041B8000E39430 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D56011D14041B8000E39430 /* Security.framework */; };
+		2D58A9CF11BD83DB006B5834 /* Tunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58A9CE11BD83DB006B5834 /* Tunnel.m */; };
+		2D58AAB011BD91E9006B5834 /* TunnelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58AAAF11BD91E9006B5834 /* TunnelController.m */; };
+		2D7A4F6711C2C9630041E1AB /* off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D7A4F6511C2C9630041E1AB /* off.mp3 */; };
+		2D7A4F6811C2C9630041E1AB /* on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D7A4F6611C2C9630041E1AB /* on.mp3 */; };
+		2D7A4FC411C2D8960041E1AB /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7A4FC311C2D8960041E1AB /* Growl.framework */; };
+		2D7A4FE411C2D9680041E1AB /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7A4FC311C2D8960041E1AB /* Growl.framework */; };
+		2D844B9F107A22470082DB8F /* PrefController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D844B9E107A22470082DB8F /* PrefController.m */; };
+		2D844BE4107A28A20082DB8F /* general.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D844BE3107A28A20082DB8F /* general.png */; };
+		2D93B102107A4C9B00D062F2 /* LoginItemsAE.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D93B100107A4C9B00D062F2 /* LoginItemsAE.c */; };
+		2D93B154107A60EB00D062F2 /* tunnels.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D93B153107A60EB00D062F2 /* tunnels.png */; };
+		2D97A48F11C1501C0041D6F7 /* SSHCommand.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D97A48E11C1501C0041D6F7 /* SSHCommand.sh */; };
+		2DE06F8811DD1B0D0033C0EE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */; };
+		2DE06F9811DD1B550033C0EE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */; };
+		2DE06FF111DD25280033C0EE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2DE06FF011DD25280033C0EE /* dsa_pub.pem */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D7A4FE311C2D92B0041E1AB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2DE06F9811DD1B550033C0EE /* Sparkle.framework in CopyFiles */,
+				2D7A4FE411C2D9680041E1AB /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DE06FA811DD1B7E0033C0EE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2D166D97143A3E4500A8E792 /* coccinellida.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = coccinellida.icns; sourceTree = "<group>"; };
+		2D1D51DE106D439600A7BCB1 /* taskicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskicon.png; sourceTree = "<group>"; };
+		2D1D51E1106D459D00A7BCB1 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		2D1D51E2106D459D00A7BCB1 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		2D56011D14041B8000E39430 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2D58A9CD11BD83DB006B5834 /* Tunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tunnel.h; sourceTree = "<group>"; };
+		2D58A9CE11BD83DB006B5834 /* Tunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tunnel.m; sourceTree = "<group>"; };
+		2D58AAAE11BD91E9006B5834 /* TunnelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelController.h; sourceTree = "<group>"; };
+		2D58AAAF11BD91E9006B5834 /* TunnelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunnelController.m; sourceTree = "<group>"; };
+		2D7A4F6511C2C9630041E1AB /* off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = off.mp3; sourceTree = "<group>"; };
+		2D7A4F6611C2C9630041E1AB /* on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on.mp3; sourceTree = "<group>"; };
+		2D7A4FC311C2D8960041E1AB /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "Growl-1.2.1-Framework/Growl.framework"; sourceTree = SOURCE_ROOT; };
+		2D844B9D107A22470082DB8F /* PrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefController.h; sourceTree = "<group>"; };
+		2D844B9E107A22470082DB8F /* PrefController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefController.m; sourceTree = "<group>"; };
+		2D844BE3107A28A20082DB8F /* general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = general.png; sourceTree = "<group>"; };
+		2D93B100107A4C9B00D062F2 /* LoginItemsAE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LoginItemsAE.c; sourceTree = "<group>"; };
+		2D93B101107A4C9B00D062F2 /* LoginItemsAE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginItemsAE.h; sourceTree = "<group>"; };
+		2D93B153107A60EB00D062F2 /* tunnels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tunnels.png; sourceTree = "<group>"; };
+		2D97A48E11C1501C0041D6F7 /* SSHCommand.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = SSHCommand.sh; sourceTree = "<group>"; };
+		2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		2DE06FF011DD25280033C0EE /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* Coccinellida_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coccinellida_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Coccinellida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Coccinellida.app; path = Coccinellida.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D56011E14041B8000E39430 /* Security.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				2D7A4FC411C2D8960041E1AB /* Growl.framework in Frameworks */,
+				2DE06F8811DD1B0D0033C0EE /* Sparkle.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2D1D51E1106D459D00A7BCB1 /* AppController.h */,
+				2D1D51E2106D459D00A7BCB1 /* AppController.m */,
+				2D844B9D107A22470082DB8F /* PrefController.h */,
+				2D844B9E107A22470082DB8F /* PrefController.m */,
+				2D58A9CD11BD83DB006B5834 /* Tunnel.h */,
+				2D58A9CE11BD83DB006B5834 /* Tunnel.m */,
+				2D58AAAE11BD91E9006B5834 /* TunnelController.h */,
+				2D58AAAF11BD91E9006B5834 /* TunnelController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */,
+				2D7A4FC311C2D8960041E1AB /* Growl.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D56011D14041B8000E39430 /* Security.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Coccinellida.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Coccinellida */ = {
+			isa = PBXGroup;
+			children = (
+				2D93B0FD107A4C5900D062F2 /* LoginItemsAE */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = Coccinellida;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* Coccinellida_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D166D97143A3E4500A8E792 /* coccinellida.icns */,
+				2DE06FF011DD25280033C0EE /* dsa_pub.pem */,
+				2D7A4F6511C2C9630041E1AB /* off.mp3 */,
+				2D7A4F6611C2C9630041E1AB /* on.mp3 */,
+				2D97A48E11C1501C0041D6F7 /* SSHCommand.sh */,
+				2D93B153107A60EB00D062F2 /* tunnels.png */,
+				2D844BE3107A28A20082DB8F /* general.png */,
+				2D1D51DE106D439600A7BCB1 /* taskicon.png */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D93B0FD107A4C5900D062F2 /* LoginItemsAE */ = {
+			isa = PBXGroup;
+			children = (
+				2D93B100107A4C9B00D062F2 /* LoginItemsAE.c */,
+				2D93B101107A4C9B00D062F2 /* LoginItemsAE.h */,
+			);
+			name = LoginItemsAE;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Coccinellida */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Coccinellida" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				2D7A4FE311C2D92B0041E1AB /* CopyFiles */,
+				2DE06FA811DD1B7E0033C0EE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Coccinellida;
+			productInstallPath = "$(HOME)/Applications";
+			productName = Coccinellida;
+			productReference = 8D1107320486CEB800E47090 /* Coccinellida.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0410;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Coccinellida" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CocTunnel */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Coccinellida */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
+				2D1D51DF106D439600A7BCB1 /* taskicon.png in Resources */,
+				2D844BE4107A28A20082DB8F /* general.png in Resources */,
+				2D93B154107A60EB00D062F2 /* tunnels.png in Resources */,
+				2D97A48F11C1501C0041D6F7 /* SSHCommand.sh in Resources */,
+				2D7A4F6711C2C9630041E1AB /* off.mp3 in Resources */,
+				2D7A4F6811C2C9630041E1AB /* on.mp3 in Resources */,
+				2DE06FF111DD25280033C0EE /* dsa_pub.pem in Resources */,
+				2D166D98143A3E4500A8E792 /* coccinellida.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				2D1D51E3106D459D00A7BCB1 /* AppController.m in Sources */,
+				2D844B9F107A22470082DB8F /* PrefController.m in Sources */,
+				2D93B102107A4C9B00D062F2 /* LoginItemsAE.c in Sources */,
+				2D58A9CF11BD83DB006B5834 /* Tunnel.m in Sources */,
+				2D58AAB011BD91E9006B5834 /* TunnelController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Coccinellida_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Coccinellida;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Coccinellida_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Coccinellida;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"Sparkle.Framework/Headers/**",
+					"Growl-1.2.1-Framework/Growl.framework/Headers/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Coccinellida;
+				SDKROOT = macosx10.6;
+				STRIP_INSTALLED_PRODUCT = YES;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_OBJC_GC = required;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"Sparkle.Framework/Headers/**",
+					"Growl-1.2.1-Framework/Growl.framework/Headers/**",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Coccinellida;
+				SDKROOT = macosx10.6;
+				STRIP_INSTALLED_PRODUCT = YES;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Coccinellida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Coccinellida" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
