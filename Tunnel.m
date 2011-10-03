@@ -375,7 +375,7 @@ static int GetFirstChildPID(int pid)
 	SecKeychainAttributeList list;
 	SecKeychainAttribute attributes[3];
 	
-	NSString* keychainItemName = [NSString stringWithFormat: @"CocTunnel <%@>", uid];
+	NSString* keychainItemName = [NSString stringWithFormat: @"Coccinellida <%@>", uid];
 	NSString* keychainItemKind = @"application password";
 	
 	attributes[0].tag = kSecAccountItemAttr;
@@ -418,7 +418,7 @@ static int GetFirstChildPID(int pid)
 	SecKeychainAttributeList list;
 	SecKeychainAttribute attributes[3];
 	
-	NSString* keychainItemName = [NSString stringWithFormat: @"CocTunnel <%@>", uid];
+	NSString* keychainItemName = [NSString stringWithFormat: @"Coccinellida <%@>", uid];
 	NSString* keychainItemKind = @"application password";
 	
 	attributes[0].tag = kSecAccountItemAttr;
@@ -453,7 +453,7 @@ static int GetFirstChildPID(int pid)
 	SecKeychainAttributeList list;
 	SecKeychainAttribute attributes[3];
 	
-	NSString* keychainItemName = [NSString stringWithFormat: @"CocTunnel <%@>", uid];
+	NSString* keychainItemName = [NSString stringWithFormat: @"Coccinellida <%@>", uid];
 	NSString* keychainItemKind = @"application password";
 	
 	attributes[0].tag = kSecAccountItemAttr;
@@ -495,7 +495,7 @@ static int GetFirstChildPID(int pid)
 	SecKeychainAttribute attributes[3];
 	uint itemsFound = 0;
 	
-	NSString* keychainItemName = [NSString stringWithFormat: @"CocTunnel <%@>", uid];
+	NSString* keychainItemName = [NSString stringWithFormat: @"Coccinellida <%@>", uid];
 	NSString* keychainItemKind = @"application password";
 	
 	attributes[0].tag = kSecAccountItemAttr;
@@ -538,7 +538,7 @@ static int GetFirstChildPID(int pid)
 	SecKeychainAttributeList list;
 	SecKeychainAttribute attributes[3];
 	
-	NSString* keychainItemName = [NSString stringWithFormat: @"CocTunnel <%@>", uid];
+	NSString* keychainItemName = [NSString stringWithFormat: @"Coccinellida <%@>", uid];
 	NSString* keychainItemKind = @"application password";
 	
 	attributes[0].tag = kSecAccountItemAttr;
