@@ -163,6 +163,7 @@ static int GetFirstChildPID(int pid)
 @synthesize port;
 @synthesize user;
 @synthesize password;
+@synthesize identity;
 @synthesize connectionTimeout;
 @synthesize aliveInterval;
 @synthesize aliveCountMax;
@@ -323,7 +324,7 @@ static int GetFirstChildPID(int pid)
 	if([specifiedUser length] > 0)
 		specifiedUser = [NSString stringWithFormat: @"%@@", specifiedUser];
 		
-	NSString* cmd = [NSString stringWithFormat: @"ssh -N %@%@%@%@%@%@%@-p %d %@%@",
+	NSString* cmd = [NSString stringWithFormat: @"ssh -N %@%@%@%@%@%@%@%@-p %d %@%@",
 					 [additionalArgs length] > 0 ? [NSString stringWithFormat: @"%@ ", additionalArgs] : @"",
 					 [pfs length] > 0 ? [NSString stringWithFormat: @"%@ ",pfs] : @"",
 					 connectionTimeout > 0 ? [NSString stringWithFormat: @"-o ConnectTimeout=%d ",connectionTimeout] : @"",
@@ -331,6 +332,7 @@ static int GetFirstChildPID(int pid)
 					 aliveCountMax > 0 ? [NSString stringWithFormat: @"-o ServerAliveCountMax=%d ",aliveCountMax] : @"",
 					 tcpKeepAlive == YES ? @"-o TCPKeepAlive=yes " : @"",
 					 compression == YES ? @"-C " : @"",
+                     [identity length] > 0 ? [NSString stringWithFormat: @"-i %@ ", identity] : @"",
 					 port,specifiedUser,host];
 	
 	NSString* conTimeout = @"30";
@@ -630,6 +632,7 @@ static int GetFirstChildPID(int pid)
 	[coder encodeObject: host forKey: @"host"];
 	[coder encodeInt: port forKey: @"port"];
 	[coder encodeObject: user forKey: @"user"];
+	[coder encodeObject: identity forKey: @"identity"];
 	[coder encodeInt: connectionTimeout forKey: @"connectionTimeout"];
 	[coder encodeInt: aliveInterval forKey: @"aliveInterval"];
 	[coder encodeInt: aliveCountMax forKey: @"aliveCountMax"];
@@ -648,6 +651,7 @@ static int GetFirstChildPID(int pid)
 	host = [coder decodeObjectForKey: @"host"];
 	port = [coder decodeIntForKey: @"port"];
 	user = [coder decodeObjectForKey: @"user"];
+    identity = [coder decodeObjectForKey: @"identity"];
 	connectionTimeout = [coder containsValueForKey: @"connectionTimeout"] ? [coder decodeIntForKey: @"connectionTimeout"] : 15;
 	aliveInterval = [coder decodeIntForKey: @"aliveInterval"];
 	aliveCountMax = [coder decodeIntForKey: @"aliveCountMax"];

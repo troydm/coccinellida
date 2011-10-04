@@ -27,6 +27,7 @@
 	int port;
 	NSString* user;
 	NSString* password;
+	NSString* identity;
 	int connectionTimeout;
 	int aliveInterval;
 	int aliveCountMax;
@@ -42,6 +43,7 @@
 @property(assign) int port;
 @property(retain) NSString* user;
 @property(retain) NSString* password;
+@property(retain) NSString* identity;
 @property(assign) int connectionTimeout;
 @property(assign) int aliveInterval;
 @property(assign) int aliveCountMax;

@@ -164,6 +164,30 @@
 	}
 }
 
+- (IBAction) chooseIdentityFile: (id) sender {
+    NSOpenPanel* panel = [NSOpenPanel openPanel];
+    
+    [panel setShowsHiddenFiles: YES];
+    
+    [panel beginSheetForDirectory: @"~"
+                             file:nil
+                   modalForWindow: tunnelWindow
+                    modalDelegate:self
+                   didEndSelector:@selector(chooseIdentityFileDidEnd:
+                                            returnCode:
+                                            contextInfo:)
+                      contextInfo:nil];
+}
+
+- (void)chooseIdentityFileDidEnd: (NSOpenPanel*)panel returnCode:(int)returnCode contextInfo:(void *)contextInfo
+{
+    if (returnCode == NSOKButton)
+    {
+        [identityTextField setStringValue: [panel filename]];
+        [self prepareSSHCommand: nil];
+	}
+}
+
 - (IBAction) changePassword: (id) sender {
 	passwordChanged = YES;
 	[NSApp endSheet: passwordWindow];
@@ -187,6 +211,7 @@
 		[selectedTunnel setPort: [[portTextField stringValue] intValue]];
 		[selectedTunnel setUser: [userTextField stringValue]];
 		[selectedTunnel setPassword: [passwordTextField stringValue]];
+        [selectedTunnel setIdentity: [identityTextField stringValue]];
 		[selectedTunnel setConnectionTimeout: [[connectionTimeoutTextField stringValue] intValue]];
 		[selectedTunnel setAliveInterval: [[aliveIntervalTextField stringValue] intValue]];
 		[selectedTunnel setAliveCountMax: [[aliveCountMaxTextField stringValue] intValue]];
@@ -223,6 +248,7 @@
 	[portTextField setStringValue: @"22"];
 	[userTextField setStringValue: @""];
 	[passwordTextField setStringValue: @""];
+    [identityTextField setStringValue: @""];
 	[connectionTimeoutTextField setStringValue: @"15"];
 	[aliveIntervalTextField setStringValue: @"30"];
 	[aliveCountMaxTextField setStringValue: @"3"];
@@ -253,6 +279,7 @@
 		[portTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel port]] stringValue]];
 		[userTextField setStringValue: [selectedTunnel user]];
 		[passwordTextField setStringValue: [selectedTunnel password]];
+        [identityTextField setStringValue: [selectedTunnel identity]];
 		[connectionTimeoutTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel connectionTimeout]] stringValue]];
 		[aliveIntervalTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel aliveInterval]] stringValue]];
 		[aliveCountMaxTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel aliveCountMax]] stringValue]];
@@ -467,6 +494,7 @@
 	[tmp setPort: [[portTextField stringValue] intValue]];
 	[tmp setUser: [userTextField stringValue]];
 	[tmp setPassword: [passwordTextField stringValue]];
+	[tmp setIdentity: [identityTextField stringValue]];
 	[tmp setConnectionTimeout: [[connectionTimeoutTextField stringValue] intValue]];
 	[tmp setAliveInterval: [[aliveIntervalTextField stringValue] intValue]];
 	[tmp setAliveCountMax: [[aliveCountMaxTextField stringValue] intValue]];

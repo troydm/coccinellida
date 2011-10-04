@@ -28,6 +28,7 @@
 	IBOutlet NSTextField* portTextField;
 	IBOutlet NSTextField* userTextField;
 	IBOutlet NSSecureTextField* passwordTextField;
+    IBOutlet NSTextField* identityTextField;
 	IBOutlet NSTextField* connectionTimeoutTextField;
 	IBOutlet NSTextField* aliveIntervalTextField;
 	IBOutlet NSTextField* aliveCountMaxTextField;
@@ -64,6 +65,8 @@
 -(void) checkTunnels;
 
 -(void) tunnelStatusChanged: (Tunnel*) tunnel status: (NSString*) status;
+
+- (IBAction) chooseIdentityFile: (id) sender;
 
 - (IBAction) changePassword: (id) sender;
 
