@@ -86,7 +86,9 @@
 - (IBAction) selectGeneral: (id) sender {
 	[tabView selectTabViewItem:[tabView tabViewItemAtIndex: 0]];
 	NSRect r = [prefWindow frame];
-	r.size.width = 350;
+	r.origin.x = [prefWindow frame].origin.x - (350 - [prefWindow frame].size.width);
+    r.origin.y = [prefWindow frame].origin.y - (230 - [prefWindow frame].size.height);
+    r.size.width = 350;
 	r.size.height = 230;
 	[prefWindow setFrame: r display: YES animate: YES];
 }
@@ -94,9 +96,11 @@
 - (IBAction) selectTunnels: (id) sender {
 	[tabView selectTabViewItem:[tabView tabViewItemAtIndex: 1]];
 	NSRect r = [prefWindow frame];
-	r.size.width = 480;
+	r.origin.x = [prefWindow frame].origin.x - (480 - [prefWindow frame].size.width);
+    r.origin.y = [prefWindow frame].origin.y - (380 - [prefWindow frame].size.height);
+    r.size.width = 480;
 	r.size.height = 380;
-	[prefWindow setFrame: r display: YES animate: YES];
+    [prefWindow setFrame: r display: YES animate: YES];
 }
 
 - (IBAction) launchOnStartup: (id) sender {

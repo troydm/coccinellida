@@ -212,6 +212,8 @@
 		[selectedTunnel setUser: [userTextField stringValue]];
 		[selectedTunnel setPassword: [passwordTextField stringValue]];
         [selectedTunnel setIdentity: [identityTextField stringValue]];
+		[selectedTunnel setSocksHost: [socksHostTextField stringValue]];
+		[selectedTunnel setSocksPort: [[socksPortTextField stringValue] intValue]];
 		[selectedTunnel setConnectionTimeout: [[connectionTimeoutTextField stringValue] intValue]];
 		[selectedTunnel setAliveInterval: [[aliveIntervalTextField stringValue] intValue]];
 		[selectedTunnel setAliveCountMax: [[aliveCountMaxTextField stringValue] intValue]];
@@ -249,6 +251,8 @@
 	[userTextField setStringValue: @""];
 	[passwordTextField setStringValue: @""];
     [identityTextField setStringValue: @""];
+	[socksHostTextField setStringValue: @""];
+	[socksPortTextField setStringValue: @""];
 	[connectionTimeoutTextField setStringValue: @"15"];
 	[aliveIntervalTextField setStringValue: @"30"];
 	[aliveCountMaxTextField setStringValue: @"3"];
@@ -280,6 +284,8 @@
 		[userTextField setStringValue: [selectedTunnel user]];
 		[passwordTextField setStringValue: [selectedTunnel password]];
         [identityTextField setStringValue: [selectedTunnel identity]];
+		[socksHostTextField setStringValue: [selectedTunnel socksHost]];
+		[socksPortTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel socksPort]] stringValue]];
 		[connectionTimeoutTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel connectionTimeout]] stringValue]];
 		[aliveIntervalTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel aliveInterval]] stringValue]];
 		[aliveCountMaxTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel aliveCountMax]] stringValue]];
@@ -495,6 +501,8 @@
 	[tmp setUser: [userTextField stringValue]];
 	[tmp setPassword: [passwordTextField stringValue]];
 	[tmp setIdentity: [identityTextField stringValue]];
+	[tmp setSocksHost: [socksHostTextField stringValue]];
+	[tmp setSocksPort: [[socksPortTextField stringValue] intValue]];
 	[tmp setConnectionTimeout: [[connectionTimeoutTextField stringValue] intValue]];
 	[tmp setAliveInterval: [[aliveIntervalTextField stringValue] intValue]];
 	[tmp setAliveCountMax: [[aliveCountMaxTextField stringValue] intValue]];

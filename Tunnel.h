@@ -28,7 +28,9 @@
 	NSString* user;
 	NSString* password;
 	NSString* identity;
-	int connectionTimeout;
+	NSString* socksHost;
+	int socksPort;
+    int connectionTimeout;
 	int aliveInterval;
 	int aliveCountMax;
 	BOOL tcpKeepAlive;
@@ -44,6 +46,8 @@
 @property(retain) NSString* user;
 @property(retain) NSString* password;
 @property(retain) NSString* identity;
+@property(retain) NSString* socksHost;
+@property(assign) int socksPort;
 @property(assign) int connectionTimeout;
 @property(assign) int aliveInterval;
 @property(assign) int aliveCountMax;

@@ -29,6 +29,8 @@
 	IBOutlet NSTextField* userTextField;
 	IBOutlet NSSecureTextField* passwordTextField;
     IBOutlet NSTextField* identityTextField;
+	IBOutlet NSTextField* socksHostTextField;
+	IBOutlet NSTextField* socksPortTextField;
 	IBOutlet NSTextField* connectionTimeoutTextField;
 	IBOutlet NSTextField* aliveIntervalTextField;
 	IBOutlet NSTextField* aliveCountMaxTextField;

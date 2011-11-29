@@ -164,6 +164,8 @@ static int GetFirstChildPID(int pid)
 @synthesize user;
 @synthesize password;
 @synthesize identity;
+@synthesize socksHost;
+@synthesize socksPort;
 @synthesize connectionTimeout;
 @synthesize aliveInterval;
 @synthesize aliveCountMax;
@@ -324,8 +326,9 @@ static int GetFirstChildPID(int pid)
 	if([specifiedUser length] > 0)
 		specifiedUser = [NSString stringWithFormat: @"%@@", specifiedUser];
 		
-	NSString* cmd = [NSString stringWithFormat: @"ssh -N %@%@%@%@%@%@%@%@-p %d %@%@",
+	NSString* cmd = [NSString stringWithFormat: @"ssh -N %@%@%@%@%@%@%@%@%@-p %d %@%@",
 					 [additionalArgs length] > 0 ? [NSString stringWithFormat: @"%@ ", additionalArgs] : @"",
+					 socksPort > 0 ? [NSString stringWithFormat: @"-D %@%d ",([socksHost length] > 0 ? [NSString stringWithFormat: @"%@:",socksHost] : @""),socksPort] : @"",
 					 [pfs length] > 0 ? [NSString stringWithFormat: @"%@ ",pfs] : @"",
 					 connectionTimeout > 0 ? [NSString stringWithFormat: @"-o ConnectTimeout=%d ",connectionTimeout] : @"",
 					 aliveInterval > 0 ? [NSString stringWithFormat: @"-o ServerAliveInterval=%d ",aliveInterval] : @"",
@@ -633,6 +636,8 @@ static int GetFirstChildPID(int pid)
 	[coder encodeInt: port forKey: @"port"];
 	[coder encodeObject: user forKey: @"user"];
 	[coder encodeObject: identity forKey: @"identity"];
+	[coder encodeObject: socksHost forKey: @"socksHost"];
+	[coder encodeInt: socksPort forKey: @"socksPort"];
 	[coder encodeInt: connectionTimeout forKey: @"connectionTimeout"];
 	[coder encodeInt: aliveInterval forKey: @"aliveInterval"];
 	[coder encodeInt: aliveCountMax forKey: @"aliveCountMax"];
@@ -652,6 +657,8 @@ static int GetFirstChildPID(int pid)
 	port = [coder decodeIntForKey: @"port"];
 	user = [coder decodeObjectForKey: @"user"];
     identity = [coder decodeObjectForKey: @"identity"];
+	socksHost = [coder containsValueForKey: @"socksHost"] ? [coder decodeObjectForKey: @"socksHost"] : @"";
+    socksPort = [coder containsValueForKey: @"socksPort"] ? [coder decodeIntForKey: @"socksPort"] : 0;
 	connectionTimeout = [coder containsValueForKey: @"connectionTimeout"] ? [coder decodeIntForKey: @"connectionTimeout"] : 15;
 	aliveInterval = [coder decodeIntForKey: @"aliveInterval"];
 	aliveCountMax = [coder decodeIntForKey: @"aliveCountMax"];
