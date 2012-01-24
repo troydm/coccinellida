@@ -24,6 +24,7 @@
 	IBOutlet NSButton* growlNotificationsButton;
 	
 	IBOutlet NSTextField* nameTextField;
+	IBOutlet NSButton* autostartCheckBox;
 	IBOutlet NSTextField* hostTextField;
 	IBOutlet NSTextField* portTextField;
 	IBOutlet NSTextField* userTextField;

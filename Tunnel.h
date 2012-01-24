@@ -23,6 +23,7 @@
 	
 	NSString* uid;
 	NSString* name;
+	BOOL autostart;
 	NSString* host;
 	int port;
 	NSString* user;
@@ -41,6 +42,7 @@
 
 @property(retain) NSString* uid;
 @property(retain) NSString* name;
+@property(assign) BOOL autostart;
 @property(retain) NSString* host;
 @property(assign) int port;
 @property(retain) NSString* user;

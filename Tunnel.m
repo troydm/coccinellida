@@ -159,6 +159,7 @@ static int GetFirstChildPID(int pid)
 
 @synthesize uid;
 @synthesize name;
+@synthesize autostart;
 @synthesize host;
 @synthesize port;
 @synthesize user;
@@ -632,6 +633,7 @@ static int GetFirstChildPID(int pid)
 	
 	[coder encodeObject: uid forKey: @"uid"];
 	[coder encodeObject: name forKey: @"name"];
+	[coder encodeBool: autostart forKey: @"autostart"];
 	[coder encodeObject: host forKey: @"host"];
 	[coder encodeInt: port forKey: @"port"];
 	[coder encodeObject: user forKey: @"user"];
@@ -653,6 +655,7 @@ static int GetFirstChildPID(int pid)
 	
 	uid = [coder decodeObjectForKey: @"uid"];
 	name = [coder decodeObjectForKey: @"name"];
+	autostart = [coder containsValueForKey: @"autostart"] ? [coder decodeBoolForKey: @"autostart"] : NO;
 	host = [coder decodeObjectForKey: @"host"];
 	port = [coder decodeIntForKey: @"port"];
 	user = [coder decodeObjectForKey: @"user"];

@@ -54,6 +54,12 @@
 }
 
 -(void) checkTunnels {
+    // Autostart tunnels
+    for(Tunnel* t in tunnels){
+        if([t autostart] == YES)
+            [t start];
+    }
+    
 	while(!exitThread){
 		@synchronized(self){
 			int i = 0;
@@ -207,6 +213,7 @@
 - (IBAction) saveEditDialog: (id) sender {
 	if ( [[nameTextField stringValue] length] > 0){
 		[selectedTunnel setName: [nameTextField stringValue]];
+        [selectedTunnel setAutostart: [autostartCheckBox state] == NSOnState ? YES : NO];
 		[selectedTunnel setHost: [hostTextField stringValue]];
 		[selectedTunnel setPort: [[portTextField stringValue] intValue]];
 		[selectedTunnel setUser: [userTextField stringValue]];
@@ -246,6 +253,7 @@
 	selectedTunnelIndex = -1;
 	portForwardings = [NSMutableArray array];
 	[nameTextField setStringValue: @""];
+    [autostartCheckBox setState: NSOffState];
 	[hostTextField setStringValue: @""];
 	[portTextField setStringValue: @"22"];
 	[userTextField setStringValue: @""];
@@ -279,6 +287,7 @@
 		selectedTunnelIndex = [tunnelsList selectedRow];
 		portForwardings = [selectedTunnel portForwardings];
 		[nameTextField setStringValue: [selectedTunnel name]];
+        [autostartCheckBox setState: [selectedTunnel autostart] == YES ? NSOnState : NSOffState];
 		[hostTextField setStringValue: [selectedTunnel host]];
 		[portTextField setStringValue: [[NSNumber numberWithInt: [selectedTunnel port]] stringValue]];
 		[userTextField setStringValue: [selectedTunnel user]];
