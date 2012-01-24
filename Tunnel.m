@@ -327,7 +327,7 @@ static int GetFirstChildPID(int pid)
 	if([specifiedUser length] > 0)
 		specifiedUser = [NSString stringWithFormat: @"%@@", specifiedUser];
 		
-	NSString* cmd = [NSString stringWithFormat: @"ssh -N %@%@%@%@%@%@%@%@%@-p %d %@%@",
+	NSString* cmd = [NSString stringWithFormat: @"ssh -v -N %@%@%@%@%@%@%@%@%@-p %d %@%@",
 					 [additionalArgs length] > 0 ? [NSString stringWithFormat: @"%@ ", additionalArgs] : @"",
 					 socksPort > 0 ? [NSString stringWithFormat: @"-D %@%d ",([socksHost length] > 0 ? [NSString stringWithFormat: @"%@:",socksHost] : @""),socksPort] : @"",
 					 [pfs length] > 0 ? [NSString stringWithFormat: @"%@ ",pfs] : @"",

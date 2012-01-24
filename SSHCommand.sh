@@ -37,6 +37,7 @@ expect {
 		"*?assword:*" {	send "$password\r"; set timeout 5;
 						expect "*?assword:*" {puts "WRONG_PASSWORD"; exit;}
 					  };
+        "*?ntering interactive session*" {puts "CONNECTED"; set timeout -1; expect eof; exit;};
 }
 
 puts "CONNECTED";
