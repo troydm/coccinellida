@@ -218,8 +218,15 @@ static int GetFirstChildPID(int pid)
 	
 	if ( [task isRunning] ){
 		int chpid = GetFirstChildPID([task processIdentifier]);
-		if(chpid != -1)
-			kill(chpid,  SIGTERM);
+
+    // get the corresponding process group
+    int gchpid = getpgid(chpid);
+
+    if(gchpid != -1) {
+      // kill ssh and all its childs (for example: git proxy ssh commands)
+      killpg(gchpid,  SIGKILL);
+    }
+
 		[task terminate];
 		task = nil;
 	}
