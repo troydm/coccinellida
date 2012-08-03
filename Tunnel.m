@@ -218,14 +218,27 @@ static int GetFirstChildPID(int pid)
 	
 	if ( [task isRunning] ){
 		int chpid = GetFirstChildPID([task processIdentifier]);
-
-    // get the corresponding process group
-    int gchpid = getpgid(chpid);
-
-    if(gchpid != -1) {
-      // kill ssh and all its childs (for example: git proxy ssh commands)
-      killpg(gchpid,  SIGKILL);
-    }
+        
+        if(chpid != -1)
+			kill(chpid,  SIGTERM);
+        
+        // Waiting for ssh process to exit
+        int c = 10;
+        while(c > 0 && GetFirstChildPID([task processIdentifier]) != -1){
+            [NSThread sleepForTimeInterval: 0.5];
+            c--;
+        }
+        
+        // Killing ssh process with SIGKILL if it didn't exit from SIGTERM withing 5 secs interval
+        if(c == 0){
+            // get the corresponding process group
+            int gchpid = getpgid(chpid);
+            
+            if(gchpid != -1) {
+                // kill ssh and all its childs (for example: git proxy ssh commands)
+                killpg(gchpid,  SIGKILL);
+            }
+        }
 
 		[task terminate];
 		task = nil;
