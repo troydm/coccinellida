@@ -27,14 +27,14 @@
     [aboutLabel setStringValue: [NSString stringWithFormat: @"%@ v%@", [aboutLabel stringValue], [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]]];
 	
 	statusBarItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-	
+	NSImage *statusBarImage = [[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"taskicon" ofType:@"png"]];
+    
 	[statusBarItem setMenu: statusMenu];
-	
 	[statusBarItem setToolTip: @"CocTunnel"];
-	
 	[statusBarItem setEnabled: YES];
-	
-	[statusBarItem setImage:[[NSImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"taskicon" ofType:@"png"]]];
+	[statusBarItem setImage:statusBarImage];
+    [statusBarItem setAlternateImage:statusBarImage];
+    [statusBarItem setHighlightMode:YES];
 	
 	[statusMenu setAutoenablesItems: NO];
 	
