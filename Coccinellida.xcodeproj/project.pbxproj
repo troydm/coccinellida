@@ -11,13 +11,10 @@
 		2D166D98143A3E4500A8E792 /* coccinellida.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2D166D97143A3E4500A8E792 /* coccinellida.icns */; };
 		2D1D51DF106D439600A7BCB1 /* taskicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D51DE106D439600A7BCB1 /* taskicon.png */; };
 		2D1D51E3106D459D00A7BCB1 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D51E2106D459D00A7BCB1 /* AppController.m */; };
-		2D56011E14041B8000E39430 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D56011D14041B8000E39430 /* Security.framework */; };
 		2D58A9CF11BD83DB006B5834 /* Tunnel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58A9CE11BD83DB006B5834 /* Tunnel.m */; };
 		2D58AAB011BD91E9006B5834 /* TunnelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D58AAAF11BD91E9006B5834 /* TunnelController.m */; };
 		2D7A4F6711C2C9630041E1AB /* off.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D7A4F6511C2C9630041E1AB /* off.mp3 */; };
 		2D7A4F6811C2C9630041E1AB /* on.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D7A4F6611C2C9630041E1AB /* on.mp3 */; };
-		2D7A4FC411C2D8960041E1AB /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7A4FC311C2D8960041E1AB /* Growl.framework */; };
-		2D7A4FE411C2D9680041E1AB /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D7A4FC311C2D8960041E1AB /* Growl.framework */; };
 		2D844B9F107A22470082DB8F /* PrefController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D844B9E107A22470082DB8F /* PrefController.m */; };
 		2D844BE4107A28A20082DB8F /* general.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D844BE3107A28A20082DB8F /* general.png */; };
 		2D93B102107A4C9B00D062F2 /* LoginItemsAE.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D93B100107A4C9B00D062F2 /* LoginItemsAE.c */; };
@@ -29,6 +26,9 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CD9F875715C15FFE005D6E1B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9F875615C15FFE005D6E1B /* Security.framework */; };
+		CDE10D0615C281F300944639 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CDE10D0415C281DE00944639 /* Growl.framework */; };
+		CDE10D0715C2820800944639 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE10D0415C281DE00944639 /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,16 +39,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				2DE06F9811DD1B550033C0EE /* Sparkle.framework in CopyFiles */,
-				2D7A4FE411C2D9680041E1AB /* Growl.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2DE06FA811DD1B7E0033C0EE /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
+				CDE10D0615C281F300944639 /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,14 +57,12 @@
 		2D1D51DE106D439600A7BCB1 /* taskicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskicon.png; sourceTree = "<group>"; };
 		2D1D51E1106D459D00A7BCB1 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
 		2D1D51E2106D459D00A7BCB1 /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
-		2D56011D14041B8000E39430 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		2D58A9CD11BD83DB006B5834 /* Tunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tunnel.h; sourceTree = "<group>"; };
 		2D58A9CE11BD83DB006B5834 /* Tunnel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tunnel.m; sourceTree = "<group>"; };
 		2D58AAAE11BD91E9006B5834 /* TunnelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunnelController.h; sourceTree = "<group>"; };
 		2D58AAAF11BD91E9006B5834 /* TunnelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TunnelController.m; sourceTree = "<group>"; };
 		2D7A4F6511C2C9630041E1AB /* off.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = off.mp3; sourceTree = "<group>"; };
 		2D7A4F6611C2C9630041E1AB /* on.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = on.mp3; sourceTree = "<group>"; };
-		2D7A4FC311C2D8960041E1AB /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = "Growl-1.2.1-Framework/Growl.framework"; sourceTree = SOURCE_ROOT; };
 		2D844B9D107A22470082DB8F /* PrefController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefController.h; sourceTree = "<group>"; };
 		2D844B9E107A22470082DB8F /* PrefController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefController.m; sourceTree = "<group>"; };
 		2D844BE3107A28A20082DB8F /* general.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = general.png; sourceTree = "<group>"; };
@@ -86,6 +75,8 @@
 		32CA4F630368D1EE00C91783 /* Coccinellida_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coccinellida_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Coccinellida.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coccinellida.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9F875615C15FFE005D6E1B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		CDE10D0415C281DE00944639 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D56011E14041B8000E39430 /* Security.framework in Frameworks */,
+				CD9F875715C15FFE005D6E1B /* Security.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				2D7A4FC411C2D8960041E1AB /* Growl.framework in Frameworks */,
 				2DE06F8811DD1B0D0033C0EE /* Sparkle.framework in Frameworks */,
+				CDE10D0715C2820800944639 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +112,9 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDE10D0415C281DE00944639 /* Growl.framework */,
+				CD9F875615C15FFE005D6E1B /* Security.framework */,
 				2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */,
-				2D7A4FC311C2D8960041E1AB /* Growl.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -131,7 +123,6 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2D56011D14041B8000E39430 /* Security.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -216,7 +207,6 @@
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
 				2D7A4FE311C2D92B0041E1AB /* CopyFiles */,
-				2DE06FA811DD1B7E0033C0EE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -315,6 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -329,6 +320,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Coccinellida;
+				SDKROOT = "";
 			};
 			name = Debug;
 		};
@@ -336,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -348,6 +341,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_NAME = Coccinellida;
+				SDKROOT = "";
 			};
 			name = Release;
 		};
