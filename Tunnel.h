@@ -40,23 +40,23 @@
 	NSMutableArray* portForwardings;
 }
 
-@property(retain) NSString* uid;
-@property(retain) NSString* name;
+@property(strong) NSString* uid;
+@property(strong) NSString* name;
 @property(assign) BOOL autostart;
-@property(retain) NSString* host;
+@property(strong) NSString* host;
 @property(assign) int port;
-@property(retain) NSString* user;
-@property(retain) NSString* password;
-@property(retain) NSString* identity;
-@property(retain) NSString* socksHost;
+@property(strong) NSString* user;
+@property(strong) NSString* password;
+@property(strong) NSString* identity;
+@property(strong) NSString* socksHost;
 @property(assign) int socksPort;
 @property(assign) int connectionTimeout;
 @property(assign) int aliveInterval;
 @property(assign) int aliveCountMax;
 @property(assign) BOOL tcpKeepAlive;
 @property(assign) BOOL compression;
-@property(retain) NSString* additionalArgs;
-@property(retain) NSMutableArray* portForwardings;
+@property(strong) NSString* additionalArgs;
+@property(strong) NSMutableArray* portForwardings;
 
 - (void) setDelegate:(id)val;
 - (id) delegate;

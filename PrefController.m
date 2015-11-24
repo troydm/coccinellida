@@ -109,7 +109,7 @@
 	if([lanchOnStartupButton state] == NSOnState){
 		int ind = [self loginItemIndex: url];
 		if(ind == -1){
-			LIAEAddURLAtEnd((CFURLRef)url, YES);
+            LIAEAddURLAtEnd((__bridge CFURLRef)url, YES);
 		}		
 	}else{
 		int ind = [self loginItemIndex: url];
@@ -120,11 +120,12 @@
 }
 
 - (int) loginItemIndex: (NSURL*) url {
-	NSArray* items = nil;
-	LIAECopyLoginItems((CFArrayRef*) &items);
-	
+	CFArrayRef items = nil;
+	LIAECopyLoginItems(&items);
+    NSArray* nsitems = (__bridge NSArray*)items;
+    
 	int i = 0;
-	for(NSDictionary* d in items){
+	for(NSDictionary* d in nsitems){
 		if([[d valueForKey: (NSString*)kLIAEURL] isEqual: url]){
 			return i; 
 		}

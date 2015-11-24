@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
+		2D0630CF1C04DB1D000F36A3 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE10D0415C281DE00944639 /* Growl.framework */; };
+		2D0630D11C04DB37000F36A3 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D0630D01C04DB37000F36A3 /* Sparkle.framework */; };
+		2D0630D21C04DB37000F36A3 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D0630D01C04DB37000F36A3 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D166D98143A3E4500A8E792 /* coccinellida.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2D166D97143A3E4500A8E792 /* coccinellida.icns */; };
 		2D1D51DF106D439600A7BCB1 /* taskicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D51DE106D439600A7BCB1 /* taskicon.png */; };
 		2D1D51E3106D459D00A7BCB1 /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1D51E2106D459D00A7BCB1 /* AppController.m */; };
@@ -20,15 +23,12 @@
 		2D93B102107A4C9B00D062F2 /* LoginItemsAE.c in Sources */ = {isa = PBXBuildFile; fileRef = 2D93B100107A4C9B00D062F2 /* LoginItemsAE.c */; };
 		2D93B154107A60EB00D062F2 /* tunnels.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D93B153107A60EB00D062F2 /* tunnels.png */; };
 		2D97A48F11C1501C0041D6F7 /* SSHCommand.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2D97A48E11C1501C0041D6F7 /* SSHCommand.sh */; };
-		2DE06F8811DD1B0D0033C0EE /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */; };
-		2DE06F9811DD1B550033C0EE /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2DE06F8711DD1B0D0033C0EE /* Sparkle.framework */; };
 		2DE06FF111DD25280033C0EE /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2DE06FF011DD25280033C0EE /* dsa_pub.pem */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		CD9F875715C15FFE005D6E1B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9F875615C15FFE005D6E1B /* Security.framework */; };
 		CDE10D0615C281F300944639 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = CDE10D0415C281DE00944639 /* Growl.framework */; };
-		CDE10D0715C2820800944639 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE10D0415C281DE00944639 /* Growl.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,8 +38,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2DE06F9811DD1B550033C0EE /* Sparkle.framework in CopyFiles */,
 				CDE10D0615C281F300944639 /* Growl.framework in CopyFiles */,
+				2D0630D21C04DB37000F36A3 /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +53,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2D0630D01C04DB37000F36A3 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		2D166D97143A3E4500A8E792 /* coccinellida.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = coccinellida.icns; sourceTree = "<group>"; };
 		2D1D51DE106D439600A7BCB1 /* taskicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskicon.png; sourceTree = "<group>"; };
 		2D1D51E1106D459D00A7BCB1 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
@@ -84,10 +85,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D0630CF1C04DB1D000F36A3 /* Growl.framework in Frameworks */,
 				CD9F875715C15FFE005D6E1B /* Security.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				2DE06F8811DD1B0D0033C0EE /* Sparkle.framework in Frameworks */,
-				CDE10D0715C2820800944639 /* Growl.framework in Frameworks */,
+				2D0630D11C04DB37000F36A3 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +142,7 @@
 		29B97314FDCFA39411CA2CEA /* Coccinellida */ = {
 			isa = PBXGroup;
 			children = (
+				2D0630D01C04DB37000F36A3 /* Sparkle.framework */,
 				2D93B0FD107A4C5900D062F2 /* LoginItemsAE */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -224,7 +226,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0710;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Coccinellida" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -305,22 +307,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Coccinellida_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Coccinellida;
-				SDKROOT = "";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Debug;
 		};
@@ -328,20 +336,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/Growl-1.2.1-Framework\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
-				GCC_MODEL_TUNING = G5;
+				GCC_ENABLE_OBJC_GC = "";
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Coccinellida_Prefix.pch;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = Coccinellida;
-				SDKROOT = "";
+				SDKROOT = macosx;
+				VALID_ARCHS = x86_64;
 			};
 			name = Release;
 		};
@@ -359,12 +374,12 @@
 					"Sparkle.Framework/Headers/**",
 					"Growl-1.2.1-Framework/Growl.framework/Headers/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Coccinellida;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
-				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
@@ -382,12 +397,12 @@
 					"Sparkle.Framework/Headers/**",
 					"Growl-1.2.1-Framework/Growl.framework/Headers/**",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Coccinellida;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
-				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};

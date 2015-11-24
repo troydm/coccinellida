@@ -147,7 +147,7 @@ static int GetFirstChildPID(int pid)
 	}
 	
 	CFUUIDRef uidref = CFUUIDCreate(nil);
-	uid = (NSString*)CFUUIDCreateString(nil, uidref);
+	uid = (NSString*)CFBridgingRelease(CFUUIDCreateString(nil, uidref));
 	CFRelease(uidref);
 	
 	lock = [NSLock new];
@@ -371,7 +371,7 @@ static int GetFirstChildPID(int pid)
 	
 	if(uid == nil || [uid length] == 0){
 		CFUUIDRef uidref = CFUUIDCreate(nil);
-		uid = (NSString*)CFUUIDCreateString(nil, uidref);
+		uid = (NSString*)CFBridgingRelease(CFUUIDCreateString(nil, uidref));
 		CFRelease(uidref);
 	}
 	

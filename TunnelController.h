@@ -9,7 +9,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Growl.h>
+#import <Growl/Growl.h>
 #import "Tunnel.h"
 
 

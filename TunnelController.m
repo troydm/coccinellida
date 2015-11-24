@@ -10,7 +10,7 @@
 
 #import "TunnelController.h"
 #import "Tunnel.h"
-#import <Growl.h>
+#import <Growl/Growl.h>
 
 @implementation TunnelController
 
@@ -69,7 +69,7 @@
 				[t readStatus];
 				if( [t running] == YES && [t checkProcess] == NO ){
 					[t stop];
-					[NSThread sleepForTimeInterval:2];
+					[NSThread sleepForTimeInterval:1];
 					[t start];
 				}
 				[[[statusMenu itemArray] objectAtIndex: i+3] setState: [t running] ? NSOnState : NSOffState]; 
@@ -115,10 +115,11 @@
 		passwordChangeTunnel = tunnel;
 		[passwordChangeTextField setStringValue: @""];
 		[passwordWindow setTitle: [NSString stringWithFormat: @"%@ incorrect password", [tunnel name]]];
-		[passwordWindow center];
-		[NSApp runModalForWindow: passwordWindow];
-		[NSApp endSheet: passwordWindow];
-		
+		[passwordWindow setLevel: NSStatusWindowLevel];
+        [passwordWindow center];
+        [NSApp performSelectorOnMainThread:@selector(runModalForWindow:) withObject:passwordWindow waitUntilDone:YES];
+        [NSApp endSheet: passwordWindow];
+        
 		if(passwordChanged){
 			[tunnel stop];
 			[tunnel start];
@@ -128,10 +129,12 @@
 			[[alert window] center];
 				
 			[alert addButtonWithTitle:@"Close"];
-			[alert setMessageText: [NSString stringWithFormat: @"Tunnel %@ Problem",[tunnel name]]];
+			[alert setMessageText: [NSString stringWithFormat: @"Tunnel %@ problem",[tunnel name]]];
 			[alert setInformativeText:@"Login/Password incorrect"];
+            [alert setAlertStyle: NSInformationalAlertStyle];
 		
-			[alert beginSheetModalForWindow: nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+            [alert runModal];
+            //[alert beginSheetModalForWindow: nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 		}
 	}
 	
@@ -144,10 +147,12 @@
 		[[alert window] center];
 		
 		[alert addButtonWithTitle:@"Close"];
-		[alert setMessageText: [NSString stringWithFormat: @"Tunnel %@ Problem",[tunnel name]]];
+		[alert setMessageText: [NSString stringWithFormat: @"Tunnel %@ problem",[tunnel name]]];
 		[alert setInformativeText:@"Connection refused"];
+        [alert setAlertStyle: NSInformationalAlertStyle];
 		
-		[alert beginSheetModalForWindow: nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
+        [alert runModal];
+		//[alert beginSheetModalForWindow: nil modalDelegate:self didEndSelector:@selector(alertDidEnd:returnCode:contextInfo:) contextInfo:nil];
 	}
 	
 	if( [status isEqualToString: @"CONNECTION_ERROR"] ){
@@ -174,25 +179,29 @@
     NSOpenPanel* panel = [NSOpenPanel openPanel];
     
     [panel setShowsHiddenFiles: YES];
+    if([panel runModal] == NSOKButton){
+        [identityTextField setStringValue: [[[panel URLs] objectAtIndex:0] path]];
+        [self prepareSSHCommand: nil];
+    }
     
-    [panel beginSheetForDirectory: @"~"
-                             file:nil
-                   modalForWindow: tunnelWindow
-                    modalDelegate:self
-                   didEndSelector:@selector(chooseIdentityFileDidEnd:
-                                            returnCode:
-                                            contextInfo:)
-                      contextInfo:nil];
+//    [panel beginSheetForDirectory: @"~"
+//                             file:nil
+//                   modalForWindow: tunnelWindow
+//                    modalDelegate:self
+//                   didEndSelector:@selector(chooseIdentityFileDidEnd:
+//                                            returnCode:
+//                                            contextInfo:)
+//                      contextInfo:nil];
 }
 
-- (void)chooseIdentityFileDidEnd: (NSOpenPanel*)panel returnCode:(int)returnCode contextInfo:(void *)contextInfo
-{
-    if (returnCode == NSOKButton)
-    {
-        [identityTextField setStringValue: [panel filename]];
-        [self prepareSSHCommand: nil];
-	}
-}
+//- (void)chooseIdentityFileDidEnd: (NSOpenPanel*)panel returnCode:(int)returnCode contextInfo:(void *)contextInfo
+//{
+//    if (returnCode == NSOKButton)
+//    {
+//        [identityTextField setStringValue: [panel filename]];
+//        [self prepareSSHCommand: nil];
+//	}
+//}
 
 - (IBAction) changePassword: (id) sender {
 	passwordChanged = YES;
@@ -241,7 +250,6 @@
 
 - (IBAction) closeEditDialog: (id) sender {
 	[tunnelWindow orderOut: self];
-	[portForwardings dealloc];
 	portForwardings = nil;
 	[NSApp stopModal];
 	selectedTunnel = nil;
@@ -420,7 +428,7 @@
 
 -(IBAction) startStopTunnel: (id) sender {
 	NSMenuItem* m = (NSMenuItem*)sender;
-	passwordChanged = NO;
+    passwordChanged = NO;
 	int i = 0;
 	int menuIndex = -1;
 	for(NSMenuItem* mi in [statusMenu itemArray]){

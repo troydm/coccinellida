@@ -9,7 +9,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Sparkle.h>
+#import <Sparkle/Sparkle.h>
 
 
 @interface PrefController : NSObject {
