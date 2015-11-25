@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <channel>
+      <title>Coccinellida's Changelog</title>
+      <link>http://coccinellida.sourceforge.net/sparkle.xml</link>
+      <description>Simple Cocoa SSH Tunnel Manager for Mac OS X.</description>
+      <language>en</language>
+         <item>
+            <title>Version 0.7 (1 bug fix)</title>
+            <pubDate>Wed, 25 Nov 2015 22:59:00 +0400</pubDate>
+            <description><![CDATA[
+		        <h3>app switched to ARC</h3>
+		        <h3>1 compatibility bug fixed</h3>
+		    ]]>
+		    </description>
+            <enclosure url="https://downloads.sourceforge.net/project/coccinellida/Coccinellida-0.7.zip?download" sparkle:version="0.7" length="1872302" type="application/octet-stream" sparkle:dsaSignature="MCwCFCf2taqRQGpHB/QR+GeahXP6mVXNAhQmD8TSTdmh1CA7Zj6srFJXek9U3w==" />
+         </item>
+   </channel>
+</rss>

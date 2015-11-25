@@ -19,7 +19,7 @@
 	<key>CFBundleSignature</key>
 	<string>APPL</string>
 	<key>CFBundleVersion</key>
-	<string>0.6.1</string>
+	<string>0.7</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.utilities</string>
 	<key>NSMainNibFile</key>
@@ -29,7 +29,7 @@
 	<key>NSUIElement</key>
 	<string>1</string>
 	<key>SUFeedURL</key>
-	<string>http://coccinellida.sourceforge.net/sparkle.xml</string>
+	<string>https://raw.githubusercontent.com/troydm/coccinellida/master/sparkle.xml</string>
 	<key>SUPublicDSAKeyFile</key>
 	<string>dsa_pub.pem</string>
 </dict>
